@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg: #0a0a0a;
+  --color-panel: #111111;
+  --color-panel-border: #262626;
+  --color-lime: #c9f31d;
+  --color-lime-dark: #a8d016;
+  --color-muted: #8a8a8a;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-[#0a0a0a] text-white font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse 900px 500px at 10% 0%, rgba(201,243,29,0.06), transparent 60%);
+  }
+  ::selection {
+    background: #c9f31d;
+    color: #0a0a0a;
+  }
+}
+
+@layer utilities {
+  .input-field {
+    @apply w-full bg-[#161616] border border-[#2a2a2a] rounded-xl pl-11 pr-4 py-3.5 text-sm text-white placeholder-neutral-500 outline-none transition-colors focus:border-[#c9f31d]/60 focus:bg-[#181818];
+  }
+  .btn-lime {
+    @apply w-full inline-flex items-center justify-center gap-2 bg-[#c9f31d] text-black font-semibold rounded-xl py-3.5 transition-transform active:scale-[0.99] hover:bg-[#d7ff3a];
+  }
+  .card {
+    @apply bg-[#111111] border border-[#232323] rounded-2xl;
+  }
+}
