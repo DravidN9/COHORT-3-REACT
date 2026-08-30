@@ -16,8 +16,8 @@ gsap.from("#box2",{
   delay:1,
   backgroundColor : 'yellow',
   borderRadius: '50%',
-  // repeat: -1,  //for unlimited
-  // yoyo: true, // start to end to start  to end
+  repeat: -1,  //for unlimited
+  yoyo: true, // start to end to start  to end
   
 
-})0
+})
